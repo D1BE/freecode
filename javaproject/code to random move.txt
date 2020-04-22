@@ -1,0 +1,62 @@
+package Map;
+import java.awt.image.BufferedImage;
+import java.util.Random;
+
+public class ducks {
+
+    private Duck duck;
+    private Animation animdown , animup , animleft ,animright;
+
+    public ducks(Duck duck){
+        this.duck = duck ;
+    }
+    public void run(){
+
+
+        while (true){
+            duck.setxMove(0);
+            duck.setyMove(0);
+            Random aleatoria = new Random();
+            int random = aleatoria.nextInt(s);
+            System.out.println(random);
+
+            if (random==0 || random==1)
+                duck.setyMove(-duck.getSpeed());
+
+
+            if (random==2)
+                duck.setyMove(duck.getSpeed());
+
+            if (random==3)
+                duck.setxMove(-duck.getSpeed());
+
+            if (random==4)
+                duck.setxMove(duck.getSpeed());
+
+            //duck.move();
+
+            try{
+                Thread.sleep(500L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
